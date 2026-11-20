@@ -38,6 +38,10 @@ LOG = ROOT / "投稿記録.md"
 SCOPES = [
     "https://www.googleapis.com/auth/youtube.upload",
     "https://www.googleapis.com/auth/youtube.readonly",
+    # 分析（再生数・視聴維持率など）を読むため
+    "https://www.googleapis.com/auth/yt-analytics.readonly",
+    # コメントを読んで、オーナーがOKした返信を送るため
+    "https://www.googleapis.com/auth/youtube.force-ssl",
 ]
 CATEGORY_EDUCATION = "27"
 JST = datetime.timezone(datetime.timedelta(hours=9))

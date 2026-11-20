@@ -29,6 +29,8 @@
     <h2>使う情報</h2>
     <ul>
       <li>YouTube Data API を通じて、運営者自身の YouTube チャンネルに動画をアップロードし、タイトル・説明文・公開日時などを設定するための権限（youtube.upload）と、チャンネル情報を確認するための読み取り権限（youtube.readonly）を使います。</li>
+      <li>運営者自身のチャンネルの再生数・視聴維持率などの統計を確認するために、YouTube Analytics API の読み取り権限（yt-analytics.readonly）を使います。</li>
+      <li>運営者自身の動画に付いたコメントを読み、運営者が確認した返信を投稿するために、youtube.force-ssl 権限を使います。視聴者のコメントは返信を考えるためだけに使い、30日を超えて保存しません。</li>
       <li>運営者以外の YouTube ユーザーの情報は、取得・保存しません。</li>
     </ul>
   </section>
@@ -59,7 +61,7 @@
 
   <section>
     <h2>English summary</h2>
-    <p>"heechiin uploader" is a private tool used only by the owner of the YouTube channel "へぇチーン" (@heechiin). It uses the YouTube Data API (youtube.upload and youtube.readonly scopes) solely to upload and schedule the owner's own videos on the owner's own channel. It does not collect data from any other users. Access tokens are stored only in the owner's private environment and are never sold or shared. Use of YouTube through this tool is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. This tool uses YouTube API Services; by using it you agree to the YouTube Terms of Service. Data retention and deletion: the tool stores only the OAuth token and the IDs of videos the owner uploaded. Stored data is deleted within 7 days after the tool stops being used or access is revoked, and no data obtained from YouTube is kept longer than 30 days. Deletion requests can be made via <a href="https://github.com/mugi1072/mugi1072.github.io/issues">GitHub Issues</a>.</p>
+    <p>"heechiin uploader" is a private tool used only by the owner of the YouTube channel "へぇチーン" (@heechiin). It uses the YouTube Data API and YouTube Analytics API (youtube.upload, youtube.readonly, yt-analytics.readonly and youtube.force-ssl scopes) solely to upload and schedule the owner's own videos, read the owner's own channel statistics, and reply (after the owner's review) to comments on the owner's own videos. Viewer comments are used only to draft replies and are not kept longer than 30 days. It does not collect data from any other users. Access tokens are stored only in the owner's private environment and are never sold or shared. Use of YouTube through this tool is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. This tool uses YouTube API Services; by using it you agree to the YouTube Terms of Service. Data retention and deletion: the tool stores only the OAuth token and the IDs of videos the owner uploaded. Stored data is deleted within 7 days after the tool stops being used or access is revoked, and no data obtained from YouTube is kept longer than 30 days. Deletion requests can be made via <a href="https://github.com/mugi1072/mugi1072.github.io/issues">GitHub Issues</a>.</p>
   </section>
 
   <p><a href="index.html">← トップへ / Home</a></p>
