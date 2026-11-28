@@ -38,7 +38,8 @@
   <section>
     <h2>保存と共有</h2>
     <ul>
-      <li>ログインのための認証情報（トークン）は、運営者の管理する環境の中だけに保存し、公開しません。</li>
+      <li>ログインのための認証情報（トークン）は、運営者のパソコンと、運営者の非公開の GitHub リポジトリの暗号化された保存領域（GitHub Actions のシークレット）にだけ保存し、公開しません。</li>
+      <li>定期的な投稿と集計は、運営者の非公開の GitHub リポジトリで GitHub Actions を使って自動で動かします。GitHub はこの処理と保存のためだけに使い、運営者以外は見られません。</li>
       <li>取得した情報を第三者に販売・提供することはありません。</li>
       <li>このツールによる YouTube の利用には、<a href="https://www.youtube.com/t/terms">YouTube 利用規約</a>と<a href="https://policies.google.com/privacy">Google プライバシーポリシー</a>が適用されます。</li>
     </ul>
@@ -53,6 +54,7 @@
     <h2>データの保存期間と削除</h2>
     <ul>
       <li>このツールが運営者のパソコンに保存するのは、ログインのための認証情報（トークン）、運営者がアップロードした動画の ID とタイトルなどの投稿記録、運営者自身のチャンネルの統計、視聴者のコメントと返信案、研究のために読んだほかのチャンネルの公開情報です。</li>
+      <li>運営者の非公開の GitHub リポジトリには、投稿記録と、運営者自身のチャンネルの統計をまとめたレポートを保存します。統計の元データと視聴者のコメントは、GitHub Actions の実行結果（Artifact）として保存し、25日で自動的に削除されます。</li>
       <li>YouTube から取得した統計・コメント・ほかのチャンネルの公開情報の元データは、30日を超えて保存しません。運営者自身のチャンネルの統計をまとめたレポートは、運営者がこのツールへの許可を続けているあいだ保存します。</li>
       <li>保存した情報は、ツールの利用をやめたとき、または権限が取り消されたときに、7日以内に削除します。</li>
       <li>このツールへの許可は、<a href="https://myaccount.google.com/permissions">Google アカウントのセキュリティ設定</a>からいつでも取り消せます。取り消すと、ツールは YouTube にアクセスできなくなります。</li>
@@ -62,11 +64,11 @@
 
   <section>
     <h2>English summary</h2>
-    <p>"heechiin uploader" is a private tool used only by the owner of the YouTube channel "へぇチーン" (@heechiin). It uses the YouTube Data API and YouTube Analytics API (youtube.upload, youtube.readonly, yt-analytics.readonly and youtube.force-ssl scopes) solely to upload and schedule the owner's own videos, read the owner's own channel statistics, and reply (after the owner's review) to comments on the owner's own videos. Viewer comments (display name, text, like count and date) are used only to draft replies. For research on video making, it may also read public information about other channels (such as channel names, subscriber counts, video titles, view counts and public comments); it does not access other users' private data. Access tokens are stored only in the owner's private environment and are never sold or shared. Use of YouTube through this tool is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. This tool uses YouTube API Services; by using it you agree to the YouTube Terms of Service. Data retention and deletion: the following are stored on the owner's PC: the OAuth token, a posting log (IDs and titles of videos the owner uploaded), the owner's own channel statistics, viewer comments with draft replies, and public information about other channels read for research. Raw statistics, comments and other channels' public information are not kept longer than 30 days; summary reports of the owner's own channel statistics are kept while the owner continues to authorize the tool. Stored data is deleted within 7 days after the tool stops being used or access is revoked. Deletion requests can be made via <a href="https://github.com/mugi1072/mugi1072.github.io/issues">GitHub Issues</a>.</p>
+    <p>"heechiin uploader" is a private tool used only by the owner of the YouTube channel "へぇチーン" (@heechiin). It uses the YouTube Data API and YouTube Analytics API (youtube.upload, youtube.readonly, yt-analytics.readonly and youtube.force-ssl scopes) solely to upload and schedule the owner's own videos, read the owner's own channel statistics, and reply (after the owner's review) to comments on the owner's own videos. Viewer comments (display name, text, like count and date) are used only to draft replies. For research on video making, it may also read public information about other channels (such as channel names, subscriber counts, video titles, view counts and public comments); it does not access other users' private data. Access tokens are stored only on the owner's PC and as an encrypted secret in the owner's private GitHub repository, and are never sold or shared. Scheduled uploads and reports run with GitHub Actions in that private repository, which only the owner can access. Use of YouTube through this tool is subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a> and the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>. Access can be revoked at any time at <a href="https://myaccount.google.com/permissions">Google Account permissions</a>. This tool uses YouTube API Services; by using it you agree to the YouTube Terms of Service. Data retention and deletion: the following are stored on the owner's PC: the OAuth token, a posting log (IDs and titles of videos the owner uploaded), the owner's own channel statistics, viewer comments with draft replies, and public information about other channels read for research. The owner's private GitHub repository stores the posting log and summary reports of the owner's own channel; raw statistics and viewer comments are kept there only as GitHub Actions artifacts, which are deleted automatically after 25 days. Raw statistics, comments and other channels' public information are not kept longer than 30 days; summary reports of the owner's own channel statistics are kept while the owner continues to authorize the tool. Stored data is deleted within 7 days after the tool stops being used or access is revoked. Deletion requests can be made via <a href="https://github.com/mugi1072/mugi1072.github.io/issues">GitHub Issues</a>.</p>
   </section>
 
   <p><a href="index.html">← トップへ / Home</a></p>
-  <p>最終更新：2026年11月25日</p>
+  <p>最終更新：2026年11月28日</p>
 </main>
 </body>
 </html>
